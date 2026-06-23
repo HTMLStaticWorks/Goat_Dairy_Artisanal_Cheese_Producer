@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capra | Partner Portal Signup</title>
+  <meta name="description" content="Apply for a wholesale partnership account with Capra to manage custom cheese supply catalogs.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            creamWhite: '#FFFDF7',
+            sage: '#7CBF7C',
+            meadow: '#4CAF50',
+            honey: '#F5B941',
+            cheese: '#FFD66B',
+            orange: '#F28C38',
+            forest: '#184D32',
+            brown: '#5A3E2B',
+            softBeige: '#F8F2E8',
+            headingDark: '#173A2E',
+            bodyDark: '#4A4A4A',
+            mutedDark: '#6E6E6E',
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS & FontAwesome & AOS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body class="bg-cover bg-center min-h-screen flex flex-col justify-between relative overflow-x-hidden" style="background-image: linear-gradient(to bottom, rgba(23, 58, 46, 0.4) 0%, rgba(23, 58, 46, 0.8) 100%), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80');">
+  
+
+
+  <!-- Floating Background Shapes -->
+  <div class="floating-shape top-24 left-10 text-cheese opacity-20">
+    <i class="fa-solid fa-cheese text-8xl"></i>
+  </div>
+  <div class="floating-shape bottom-24 right-10 text-sage opacity-20 floating-shape-delay-1">
+    <i class="fa-solid fa-leaf text-8xl"></i>
+  </div>
+
+  <!-- Header with toggles only -->
+  <header class="w-full py-6 px-4 sm:px-8 z-10 flex justify-end items-center">
+    <div class="flex items-center space-x-3 rtl:space-x-reverse">
+      <!-- Theme Toggle -->
+      <button class="theme-toggle w-9 h-9 flex items-center justify-center rounded-lg border border-white/20 hover:bg-white/10 text-white transition-all" aria-label="Toggle Theme">
+        <i class="fa-solid fa-sun dark:hidden"></i>
+        <i class="fa-solid fa-moon hidden dark:block"></i>
+      </button>
+      
+      <!-- RTL Toggle -->
+      <button class="rtl-toggle w-9 h-9 flex items-center justify-center rounded-lg border border-white/20 hover:bg-white/10 text-white transition-all" aria-label="Toggle Layout Direction">
+        <i class="fa-solid fa-right-left rtl-flip"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Signup Card Container (Centered) -->
+  <main class="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 z-10">
+    <div class="max-w-lg w-full bg-white/70 dark:bg-black/60 backdrop-blur-md rounded-3xl p-8 md:p-10 border border-white/20 dark:border-white/10 shadow-2xl" data-aos="zoom-in">
+      <div class="text-center mb-8">
+        <!-- Brand Logo and Name -->
+        <a href="index.html" class="flex items-center justify-center space-x-3 rtl:space-x-reverse mb-6 group cursor-pointer">
+          <div class="w-10 h-10 bg-forest rounded-xl flex items-center justify-center shadow-lg transition-transform group-hover:scale-105">
+            <i class="fa-solid fa-cheese text-creamWhite text-xl"></i>
+          </div>
+          <span class="font-playfair font-bold text-2xl text-headingDark dark:text-creamWhite tracking-wide group-hover:text-forest dark:group-hover:text-sage transition-colors">Capra</span>
+        </a>
+        <h2 class="font-playfair font-bold text-3xl text-headingDark dark:text-creamWhite">Create Wholesale Account</h2>
+        <p class="text-xs text-mutedDark dark:text-gray-300 mt-2 font-inter">
+          Register to view catalog pricing tiers and request volume order guides.
+        </p>
+      </div>
+
+      <form class="inquiry-form space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Contact Name</label>
+            <input type="text" required placeholder="Julian Vance" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Business Entity</label>
+            <input type="text" required placeholder="Gourmet Fine Foods LLC" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Email Address</label>
+          <input type="email" required placeholder="buyer@gourmetfinefoods.com" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Password</label>
+          <input type="password" id="signup-password" required placeholder="Create a strong password" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+          <!-- Password strength container -->
+          <div class="mt-2">
+            <div id="password-strength" class="h-2 rounded bg-gray-200 w-0 transition-all duration-300"></div>
+            <span id="password-strength-text" class="text-xs mt-1 block"></span>
+          </div>
+        </div>
+
+        <label class="flex items-start space-x-2.5 rtl:space-x-reverse cursor-pointer">
+          <input type="checkbox" required class="rounded border-sage/30 text-forest focus:ring-sage h-4 w-4 bg-white/80 mt-0.5">
+          <span class="text-xs text-bodyDark dark:text-gray-300 leading-relaxed font-inter">
+            I agree to the Capra <a href="#" class="text-forest dark:text-sage font-bold hover:text-honey transition-colors">Wholesale Policies</a> and <a href="#" class="text-forest dark:text-sage font-bold hover:text-honey transition-colors">Terms of Service</a>.
+          </span>
+        </label>
+
+        <button type="submit" class="bg-forest hover:bg-forest/90 dark:bg-sage dark:hover:bg-sage/90 text-creamWhite dark:text-forest font-semibold px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all w-full text-sm">
+          Apply for Registration
+        </button>
+      </form>
+
+      <div class="mt-6 text-center text-xs font-inter text-mutedDark dark:text-gray-300">
+        Already registered? <a href="login.html" class="text-forest dark:text-sage font-bold hover:text-honey transition-colors">Log in here</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Small minimal Footer just for Copyright -->
+  <footer class="w-full py-6 px-4 text-center z-10 text-xs text-white/50">
+    <p>&copy; 2026 Capra Dairy. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+</html>

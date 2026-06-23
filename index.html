@@ -1,1 +1,779 @@
-hello
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capra | Premium Artisanal Goat Dairy & Cheese Co.</title>
+  <meta name="description"
+    content="Experience premium handcrafted goat cheeses, sustainable organic farming, and heritage dairy craftsmanship from Capra.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            creamWhite: '#FFFDF7',
+            sage: '#7CBF7C',
+            meadow: '#4CAF50',
+            honey: '#F5B941',
+            cheese: '#FFD66B',
+            orange: '#F28C38',
+            forest: '#184D32',
+            brown: '#5A3E2B',
+            softBeige: '#F8F2E8',
+            headingDark: '#173A2E',
+            bodyDark: '#4A4A4A',
+            mutedDark: '#6E6E6E',
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS & FontAwesome & AOS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+
+<body
+  class="bg-creamWhite text-bodyDark dark:bg-[#111612] dark:text-[#E2E8F0] min-h-screen flex flex-col relative overflow-x-hidden">
+
+
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Floating Background Shapes -->
+  <div class="floating-shape top-36 left-10 text-sage opacity-10">
+    <i class="fa-solid fa-leaf text-8xl"></i>
+  </div>
+  <div class="floating-shape top-96 right-10 text-cheese opacity-10 floating-shape-delay-1">
+    <i class="fa-solid fa-cheese text-9xl"></i>
+  </div>
+  <div class="floating-shape bottom-44 left-20 text-honey opacity-10 floating-shape-delay-2">
+    <i class="fa-solid fa-droplet text-7xl"></i>
+  </div>
+
+  <!-- Sticky Header / Navbar -->
+  <header
+    class="sticky top-0 z-50 bg-white/80 dark:bg-[#111612]/80 backdrop-blur-md border-b border-sage/10 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+          <div
+            class="w-12 h-12 bg-forest dark:bg-sage rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-cheese text-creamWhite dark:text-forest text-2xl"></i>
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-playfair font-bold text-2xl text-headingDark dark:text-creamWhite leading-tight tracking-wide">Capra</span>
+            <span class="text-[10px] tracking-widest uppercase font-inter text-sage dark:text-cheese font-semibold">Goat
+              Dairy</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden lg:flex space-x-8 rtl:space-x-reverse font-inter font-medium text-sm lg:text-base animate-fade-in">
+          <a href="index.html"
+            class="text-forest dark:text-sage border-b-2 border-forest dark:border-sage px-1 py-2 transition-colors">Home
+            1</a>
+          <a href="home2.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Home
+            2</a>
+          <a href="about.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">About</a>
+          <a href="collection.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Cheese
+            Collection</a>
+          <a href="wholesale.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Wholesale</a>
+          <a href="contact.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right CTA & Toggles -->
+        <div class="flex items-center space-x-2 md:space-x-4 rtl:space-x-reverse">
+          <!-- Theme Toggle (Desktop only) -->
+          <button
+            class="theme-toggle hidden lg:flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center rounded-lg border border-sage/20 hover:bg-softBeige dark:hover:bg-forest/20 text-forest dark:text-creamWhite transition-all"
+            aria-label="Toggle Theme">
+            <i class="fa-solid fa-sun dark:hidden"></i>
+            <i class="fa-solid fa-moon hidden dark:block"></i>
+          </button>
+
+          <!-- RTL Toggle (Desktop only) -->
+          <button
+            class="rtl-toggle hidden lg:flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center rounded-lg border border-sage/20 hover:bg-softBeige dark:hover:bg-forest/20 text-forest dark:text-creamWhite transition-all"
+            aria-label="Toggle Layout Direction">
+            <i class="fa-solid fa-right-left rtl-flip"></i>
+          </button>
+
+          <!-- Signup (Desktop only) -->
+          <a href="signup.html"
+            class="hidden lg:inline-block bg-forest hover:bg-forest/90 dark:bg-sage dark:hover:bg-sage/90 text-creamWhite dark:text-forest font-semibold px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg text-xs sm:text-sm">
+            Sign Up
+          </a>
+
+          <!-- Hamburger Button -->
+          <button id="mobile-menu-btn"
+            class="lg:hidden w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg border border-sage/20 text-forest dark:text-creamWhite animate-pulse"
+            aria-expanded="false" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-out Menu -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden bg-white dark:bg-[#111612] border-t border-sage/10 px-4 py-6 space-y-4 shadow-xl transition-all duration-300 font-inter">
+      <nav class="flex flex-col space-y-3 font-medium">
+        <a href="index.html" class="text-forest dark:text-sage font-bold py-2 border-b border-sage/5">Home 1</a>
+        <a href="home2.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">Home 2</a>
+        <a href="about.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">About</a>
+        <a href="collection.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">Cheese
+          Collection</a>
+        <a href="wholesale.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">Wholesale</a>
+        <a href="contact.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">Contact</a>
+      </nav>
+
+      <!-- Preferences and Toggles for Mobile/Tablet -->
+      <div class="pt-4 border-t border-sage/10 flex items-center justify-between">
+        <span class="text-sm font-semibold text-headingDark dark:text-creamWhite">Preferences</span>
+        <div class="flex space-x-2 rtl:space-x-reverse">
+          <!-- Theme Toggle (Mobile) -->
+          <button
+            class="theme-toggle w-9 h-9 flex items-center justify-center rounded-lg border border-sage/20 text-forest dark:text-creamWhite hover:bg-softBeige dark:hover:bg-forest/20 transition-all"
+            aria-label="Toggle Theme">
+            <i class="fa-solid fa-sun dark:hidden"></i>
+            <i class="fa-solid fa-moon hidden dark:block"></i>
+          </button>
+
+          <!-- RTL Toggle (Mobile) -->
+          <button
+            class="rtl-toggle w-9 h-9 flex items-center justify-center rounded-lg border border-sage/20 text-forest dark:text-creamWhite hover:bg-softBeige dark:hover:bg-forest/20 transition-all"
+            aria-label="Toggle Layout Direction">
+            <i class="fa-solid fa-right-left rtl-flip"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-2 flex flex-col space-y-3">
+        <a href="login.html"
+          class="text-center text-forest dark:text-sage py-2.5 border border-forest dark:border-sage rounded-lg font-semibold hover:bg-softBeige transition-all">Log
+          In</a>
+        <a href="signup.html"
+          class="text-center bg-forest text-creamWhite dark:bg-sage dark:text-forest py-2.5 rounded-lg font-semibold shadow-md hover:bg-forest/90 transition-all">Sign
+          Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center bg-cover bg-center overflow-hidden py-16"
+    style="background-image: linear-gradient(to bottom, rgba(23, 58, 46, 0.8), rgba(23, 58, 46, 0.8)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80');">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+      <div class="max-w-3xl mx-auto text-center text-creamWhite" data-aos="fade-up" data-aos-duration="1000">
+        <span
+          class="inline-block bg-sage/35 border border-sage/30 text-cheese font-semibold text-sm uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 font-inter">
+          <i class="fa-solid fa-medal mr-2"></i>Award-Winning Artisanal Cheeses
+        </span>
+        <h1 class="font-playfair font-bold text-5xl md:text-7xl leading-tight text-white mb-6">
+          Crafted by Hand. <br><span class="text-cheese">Nurtured by Nature.</span>
+        </h1>
+        <p class="font-inter text-lg md:text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl mx-auto">
+          From the fresh clover fields of our family dairy directly to your culinary table. Discover the rich, complex
+          flavors of premium, sustainably produced raw goat cheese.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="collection.html"
+            class="bg-honey hover:bg-honey/95 text-forest font-semibold text-center px-8 py-4 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 text-base md:text-lg">
+            Explore Collection
+          </a>
+          <a href="wholesale.html"
+            class="bg-transparent hover:bg-white/10 text-white font-semibold text-center border-2 border-white/60 px-8 py-4 rounded-lg transition-all duration-300 text-base md:text-lg">
+            Wholesale Inquiry
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Artisan Cheeses -->
+  <section class="py-24 bg-white dark:bg-[#151c16] relative z-10 border-b border-sage/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Signature
+          Selections</span>
+        <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3">Featured
+          Artisan Cheeses</h2>
+        <p class="text-mutedDark dark:text-gray-300 mt-4 text-base md:text-lg">
+          Each batch is meticulously monitored, aging to perfection in our custom microclimate cellars.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="bg-creamWhite dark:bg-[#1E2721] rounded-2xl overflow-hidden shadow-md border border-sage/10 premium-card zoom-img-container flex flex-col"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="h-64 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=800&q=80"
+              alt="Chevre Cheese" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-orange text-creamWhite text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">Best
+              Seller</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Capra Herb Chèvre</h3>
+              <span class="text-xs bg-sage/20 text-forest dark:text-sage font-bold py-1 px-2 rounded">Fresh</span>
+            </div>
+            <p class="text-sm text-mutedDark dark:text-gray-300 mb-4 flex-grow">
+              Rich, creamy spreadable goat cheese rolled in hand-picked garden rosemary, thyme, and lavender.
+            </p>
+            <div class="border-t border-sage/10 pt-4 mt-auto">
+              <div class="grid grid-cols-2 gap-2 text-xs text-mutedDark dark:text-gray-400">
+                <div><i class="fa-regular fa-clock mr-1.5 text-honey"></i><strong>Age:</strong> 5 Days</div>
+                <div><i class="fa-solid fa-wine-glass mr-1.5 text-orange"></i><strong>Pairing:</strong> Sauvignon Blanc
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-creamWhite dark:bg-[#1E2721] rounded-2xl overflow-hidden shadow-md border border-sage/10 premium-card zoom-img-container flex flex-col"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="h-64 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1552767059-ce182ead6c1b?auto=format&fit=crop&w=800&q=80"
+              alt="Aged Tomme" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-forest text-creamWhite text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">Reserve</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Aged Meadow Tomme</h3>
+              <span class="text-xs bg-orange/20 text-orange font-bold py-1 px-2 rounded">Semi-Hard</span>
+            </div>
+            <p class="text-sm text-mutedDark dark:text-gray-300 mb-4 flex-grow">
+              Nutty and slightly earthy notes with an exceptionally smooth, crystalline texture. Complex and elegant.
+            </p>
+            <div class="border-t border-sage/10 pt-4 mt-auto">
+              <div class="grid grid-cols-2 gap-2 text-xs text-mutedDark dark:text-gray-400">
+                <div><i class="fa-regular fa-clock mr-1.5 text-honey"></i><strong>Age:</strong> 6 Months</div>
+                <div><i class="fa-solid fa-wine-glass mr-1.5 text-orange"></i><strong>Pairing:</strong> Pinot Noir</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-creamWhite dark:bg-[#1E2721] rounded-2xl overflow-hidden shadow-md border border-sage/10 premium-card zoom-img-container flex flex-col"
+          data-aos="fade-up" data-aos-delay="300">
+          <div class="h-64 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1624806992066-5ffcf7ca186b?auto=format&fit=crop&w=800&q=80"
+              alt="Bloom Rind Cheese" class="w-full h-full object-cover">
+            <span
+              class="absolute top-4 right-4 bg-honey text-forest text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">Limited</span>
+          </div>
+          <div class="p-6 flex-grow flex flex-col">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Golden Honey Croft</h3>
+              <span class="text-xs bg-honey/20 text-orange font-bold py-1 px-2 rounded">Soft Rind</span>
+            </div>
+            <p class="text-sm text-mutedDark dark:text-gray-300 mb-4 flex-grow">
+              Infused with raw organic local honey, featuring a luscious bloomy rind and deep buttercup coloration.
+            </p>
+            <div class="border-t border-sage/10 pt-4 mt-auto">
+              <div class="grid grid-cols-2 gap-2 text-xs text-mutedDark dark:text-gray-400">
+                <div><i class="fa-regular fa-clock mr-1.5 text-honey"></i><strong>Age:</strong> 3 Weeks</div>
+                <div><i class="fa-solid fa-wine-glass mr-1.5 text-orange"></i><strong>Pairing:</strong> dry Cider</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="collection.html"
+          class="inline-flex items-center space-x-2 font-inter font-bold text-forest dark:text-sage hover:text-honey dark:hover:text-honey transition-colors group">
+          <span>View Our Entire Cheese Lineup</span>
+          <i class="fa-solid fa-arrow-right group-hover:translate-x-1.5 transition-transform rtl-flip"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Farm-to-Table Story -->
+  <section class="py-24 bg-softBeige dark:bg-[#131915] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="relative" data-aos="fade-right">
+          <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#1E2721] relative z-10">
+            <img src="https://images.pexels.com/photos/7817779/pexels-photo-7817779.jpeg
+            " alt="Goats feeding in meadow" class="w-full h-[500px] object-cover">
+          </div>
+          <!-- Decorative stamp overlay -->
+          <div
+            class="absolute -bottom-8 -right-8 bg-honey text-forest font-bold p-6 rounded-full shadow-2xl z-20 w-36 h-36 flex flex-col items-center justify-center text-center border-4 border-creamWhite dark:border-[#131915]">
+            <i class="fa-solid fa-medal text-xl mb-1"></i>
+            <span class="text-xs uppercase tracking-widest font-inter">100% Organic</span>
+          </div>
+        </div>
+
+        <div data-aos="fade-left">
+          <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Our
+            Heritage</span>
+          <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3 mb-6">From
+            Clover Meadows to Artisanal Boards</h2>
+          <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-6 leading-relaxed">
+            At Capra, our journey began over three generations ago with a single dairy herd and an unwavering passion
+            for high-welfare dairy farming. We believe that premium artisanal cheese starts with the soils, the climate,
+            and most importantly, the happiness of our free-roaming Alpine and LaMancha goats.
+          </p>
+          <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
+            By feeding our goats wild pasture grass and native clover, their milk carries distinct botanical notes that
+            define the signature flavors of Capra cheeses. No preservatives, no fillers—just pure, cold-filtered natural
+            goodness.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="flex items-start space-x-3 rtl:space-x-reverse">
+              <i class="fa-solid fa-heart text-2xl text-sage mt-1"></i>
+              <div>
+                <h4 class="font-playfair font-bold text-lg text-headingDark dark:text-creamWhite">Ethical Welfare</h4>
+                <p class="text-xs text-mutedDark dark:text-gray-400 mt-1">Happier goats make rich, delicious milk.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3 rtl:space-x-reverse">
+              <i class="fa-solid fa-seedling text-2xl text-sage mt-1"></i>
+              <div>
+                <h4 class="font-playfair font-bold text-lg text-headingDark dark:text-creamWhite">Eco-Friendly</h4>
+                <p class="text-xs text-mutedDark dark:text-gray-400 mt-1">Carbon-neutral processing facilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cheese Crafting Process -->
+  <section class="py-24 bg-white dark:bg-[#111612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+        <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Artisanal
+          Mastery</span>
+        <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3">The Cheese
+          Crafting Process</h2>
+        <p class="text-mutedDark dark:text-gray-300 mt-4 text-base md:text-lg">
+          We combine centuries-old European dairy traditions with modern laboratory standards to produce premium
+          culinary blocks.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        <!-- Connecting Line (Desktop) -->
+        <div class="hidden md:block absolute top-1/3 left-[12%] right-[12%] h-0.5 bg-sage/20 z-0"></div>
+
+        <!-- Step 1 -->
+        <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="w-20 h-20 bg-softBeige dark:bg-[#1E2721] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md border border-sage/10 text-forest dark:text-sage text-2xl font-bold font-playfair hover:bg-forest hover:text-creamWhite transition-all duration-300">
+            01
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mb-2">Milking & Filtering
+          </h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Milked fresh at dawn and immediately chilled to maintain organic integrity.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="w-20 h-20 bg-softBeige dark:bg-[#1E2721] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md border border-sage/10 text-forest dark:text-sage text-2xl font-bold font-playfair hover:bg-forest hover:text-creamWhite transition-all duration-300">
+            02
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mb-2">Slow Coagulation</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Curdled naturally using biological vegetarian rennets over 24 hours.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="w-20 h-20 bg-softBeige dark:bg-[#1E2721] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md border border-sage/10 text-forest dark:text-sage text-2xl font-bold font-playfair hover:bg-forest hover:text-creamWhite transition-all duration-300">
+            03
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mb-2">Molding & Salting</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Ladled by hand into custom molds and salted with hand-ground sea salt.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="w-20 h-20 bg-softBeige dark:bg-[#1E2721] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-md border border-sage/10 text-forest dark:text-sage text-2xl font-bold font-playfair hover:bg-forest hover:text-creamWhite transition-all duration-300">
+            04
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mb-2">Cellar Aging</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Aged in controlled microclimates to enrich botanical flavor dynamics.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Goat Milk Cheese -->
+  <section class="py-24 bg-softBeige dark:bg-[#151c16]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <span
+            class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Nutritional
+            Advantages</span>
+          <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3 mb-6">Why
+            Choose Goat Milk Cheese?</h2>
+          <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-8">
+            Goat milk is naturally structured with shorter fatty acid chains and smaller fat globules than cow's milk,
+            making it highly bio-digestible and offering a luxurious flavor profile.
+          </p>
+
+          <div class="space-y-6">
+            <!-- Benefit 1 -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div
+                class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-sage/20 text-forest dark:text-sage flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-bolt text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Easier Digestion</h4>
+                <p class="text-sm text-mutedDark dark:text-gray-400 mt-1">
+                  Contains significantly lower A1 casein proteins, lowering bloating and stomach sensitivites.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div
+                class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-sage/20 text-forest dark:text-sage flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-shield-halved text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Rich in Nutrients</h4>
+                <p class="text-sm text-mutedDark dark:text-gray-400 mt-1">
+                  Loaded with calcium, phosphorus, vitamin A, and healthy medium-chain fatty acids.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+              <div
+                class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-sage/20 text-forest dark:text-sage flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-star text-lg"></i>
+              </div>
+              <div>
+                <h4 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Complex Flavor Profile
+                </h4>
+                <p class="text-sm text-mutedDark dark:text-gray-400 mt-1">
+                  Provides a signature tart finish and rich finish coveted by gourmet culinary chefs worldwide.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative" data-aos="fade-left">
+          <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#1E2721]">
+            <img src="https://images.pexels.com/photos/4187780/pexels-photo-4187780.jpeg"
+              alt="Gourmet goat cheese serving" class="w-full h-[500px] object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Counter Section -->
+  <section class="py-16 bg-forest text-creamWhite dark:bg-[#1A241F] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="font-playfair font-bold text-4xl md:text-5xl text-cheese"><span class="stat-counter"
+              data-target="15">0</span>+</div>
+          <div class="text-xs md:text-sm uppercase tracking-widest font-inter text-sage mt-2">Cheese Varieties</div>
+        </div>
+        <div>
+          <div class="font-playfair font-bold text-4xl md:text-5xl text-cheese"><span class="stat-counter"
+              data-target="120">0</span>+</div>
+          <div class="text-xs md:text-sm uppercase tracking-widest font-inter text-sage mt-2">Restaurant Partners</div>
+        </div>
+        <div>
+          <div class="font-playfair font-bold text-4xl md:text-5xl text-cheese"><span class="stat-counter"
+              data-target="45">0</span>k</div>
+          <div class="text-xs md:text-sm uppercase tracking-widest font-inter text-sage mt-2">Happy Goats</div>
+        </div>
+        <div>
+          <div class="font-playfair font-bold text-4xl md:text-5xl text-cheese"><span class="stat-counter"
+              data-target="8">0</span></div>
+          <div class="text-xs md:text-sm uppercase tracking-widest font-inter text-sage mt-2">National Awards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="py-24 bg-white dark:bg-[#111612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Culinary
+          Accolades</span>
+        <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3">Loved by
+          Chefs & Foodies</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-softBeige dark:bg-[#1E2721] p-8 rounded-2xl border border-sage/10 relative shadow-sm"
+          data-aos="fade-right">
+          <i class="fa-solid fa-quote-left text-4xl text-sage/20 absolute top-6 left-6"></i>
+          <p
+            class="font-inter text-base md:text-lg text-bodyDark dark:text-gray-300 italic mb-6 relative z-10 leading-relaxed">
+            "The Meadow Tomme from Capra is a permanent feature on our charcuterie boards. The crystal structure and
+            deep grass undertone have earned consistent praise from our gourmet patrons."
+          </p>
+          <div class="flex items-center space-x-4 rtl:space-x-reverse border-t border-sage/10 pt-4">
+            <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+              <div class="w-full h-full bg-forest flex items-center justify-center text-creamWhite font-bold">Chef</div>
+            </div>
+            <div>
+              <h4 class="font-playfair font-bold text-base text-headingDark dark:text-creamWhite">Chef Marcus Vane</h4>
+              <p class="text-xs text-mutedDark dark:text-gray-400">Head Chef, The Willow Bistro</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-softBeige dark:bg-[#1E2721] p-8 rounded-2xl border border-sage/10 relative shadow-sm"
+          data-aos="fade-left">
+          <i class="fa-solid fa-quote-left text-4xl text-sage/20 absolute top-6 left-6"></i>
+          <p
+            class="font-inter text-base md:text-lg text-bodyDark dark:text-gray-300 italic mb-6 relative z-10 leading-relaxed">
+            "It is extremely rare to find dairy farms that emphasize sustainable soil building and zero chemical feed.
+            You can taste the authenticity and ethical passion in their fresh herbs chèvre."
+          </p>
+          <div class="flex items-center space-x-4 rtl:space-x-reverse border-t border-sage/10 pt-4">
+            <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+              <div class="w-full h-full bg-forest flex items-center justify-center text-creamWhite font-bold">Critic
+              </div>
+            </div>
+            <div>
+              <h4 class="font-playfair font-bold text-base text-headingDark dark:text-creamWhite">Elena Rostova</h4>
+              <p class="text-xs text-mutedDark dark:text-gray-400">Gourmet Food Critic, Organic Digest</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Restaurant Partners -->
+  <section class="py-12 bg-creamWhite dark:bg-[#151c16] border-t border-b border-sage/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-xs uppercase tracking-widest text-mutedDark dark:text-gray-400 font-semibold mb-6">
+        Proudly Supplying Premium Establisments</p>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 dark:opacity-80">
+        <span
+          class="font-playfair text-xl md:text-2xl font-bold text-headingDark dark:text-creamWhite tracking-wider"><i
+            class="fa-solid fa-utensils mr-2"></i>THE GREEN HOUSE</span>
+        <span
+          class="font-playfair text-xl md:text-2xl font-bold text-headingDark dark:text-creamWhite tracking-wider"><i
+            class="fa-solid fa-wine-bottle mr-2"></i>AMBROSIA TAVERN</span>
+        <span
+          class="font-playfair text-xl md:text-2xl font-bold text-headingDark dark:text-creamWhite tracking-wider"><i
+            class="fa-solid fa-plate-wheat mr-2"></i>FORK & MEADOW</span>
+        <span
+          class="font-playfair text-xl md:text-2xl font-bold text-headingDark dark:text-creamWhite tracking-wider"><i
+            class="fa-solid fa-store mr-2"></i>HERITAGE DELI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wholesale CTA -->
+  <section class="py-20 bg-softBeige dark:bg-[#1A241F]" data-aos="zoom-in">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mb-6">Partner With
+        Capra</h2>
+      <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+        Interested in carrying our artisanal goat dairy products? We provide custom packaging, wholesale pricing, and
+        express delivery logistics for restaurants, grocery chains, and local markets.
+      </p>
+      <a href="wholesale.html"
+        class="inline-block bg-forest hover:bg-forest/90 dark:bg-sage dark:hover:bg-sage/90 text-creamWhite dark:text-forest font-semibold px-8 py-4 rounded-lg shadow-md hover:shadow-lg transition-all">
+        Become a Wholesale Partner
+      </a>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-20 bg-white dark:bg-[#111612] relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+      <div
+        class="w-16 h-16 bg-sage/10 dark:bg-sage/20 text-forest dark:text-sage rounded-2xl flex items-center justify-center mx-auto mb-6">
+        <i class="fa-regular fa-paper-plane text-2xl"></i>
+      </div>
+      <h2 class="font-playfair font-bold text-3xl md:text-4xl text-headingDark dark:text-creamWhite mb-4">Join The
+        Cheesemaker's Guild</h2>
+      <p class="text-mutedDark dark:text-gray-400 text-sm md:text-base mb-8 max-w-lg mx-auto">
+        Subscribe to receive recipes, exclusive seasonal release announcements, and private farm-to-table dining
+        invitations.
+      </p>
+
+      <form class="inquiry-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="Enter your email address" required
+          class="flex-grow px-4 py-3 rounded-lg border border-sage/30 bg-creamWhite dark:bg-[#1E2721] text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter">
+        <button type="submit"
+          class="bg-forest hover:bg-forest/90 dark:bg-sage dark:hover:bg-sage/90 text-creamWhite dark:text-forest font-semibold px-6 py-3 rounded-lg transition-all">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="bg-white text-bodyDark dark:bg-[#0E130F] dark:text-[#E2E8F0] pt-16 pb-8 border-t border-sage/10 dark:border-sage/5 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
+        <!-- Overview -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 rtl:space-x-reverse mb-6">
+            <div class="w-10 h-10 bg-forest dark:bg-sage rounded-lg flex items-center justify-center shadow-md">
+              <i class="fa-solid fa-cheese text-creamWhite dark:text-forest text-xl"></i>
+            </div>
+            <span
+              class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite leading-tight">Capra</span>
+          </div>
+          <p class="text-sm text-mutedDark dark:text-gray-300 mb-6 leading-relaxed max-w-sm">
+            Handcrafting premium organic goat milk products using old-world heritage traditions and ecological farming
+            methods.
+          </p>
+          <div class="flex space-x-4 rtl:space-x-reverse">
+            <a href="#"
+              class="w-10 h-10 rounded-full border border-forest/20 dark:border-sage/30 flex items-center justify-center text-forest dark:text-creamWhite hover:bg-forest hover:text-white dark:hover:bg-sage dark:hover:text-forest transition-all"
+              aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full border border-forest/20 dark:border-sage/30 flex items-center justify-center text-forest dark:text-creamWhite hover:bg-forest hover:text-white dark:hover:bg-sage dark:hover:text-forest transition-all"
+              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full border border-forest/20 dark:border-sage/30 flex items-center justify-center text-forest dark:text-creamWhite hover:bg-forest hover:text-white dark:hover:bg-sage dark:hover:text-forest transition-all"
+              aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-mutedDark dark:text-gray-300">
+            <li><a href="index.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Home 1</a>
+            </li>
+            <li><a href="home2.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Home 2</a>
+            </li>
+            <li><a href="about.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">About Us</a>
+            </li>
+            <li><a href="collection.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Cheese
+                Collection</a></li>
+            <li><a href="wholesale.html"
+                class="hover:text-forest dark:hover:text-creamWhite transition-colors">Wholesale</a></li>
+            <li><a href="contact.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Contact
+                Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Cheese Categories -->
+        <div>
+          <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Categories</h4>
+          <ul class="space-y-2 text-sm text-mutedDark dark:text-gray-300">
+            <li><a href="collection.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Soft
+                Fresh Chevre</a></li>
+            <li><a href="collection.html"
+                class="hover:text-forest dark:hover:text-creamWhite transition-colors">Semi-Hard Tommes</a></li>
+            <li><a href="collection.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Aged
+                Reserve Cheddars</a></li>
+            <li><a href="collection.html"
+                class="hover:text-forest dark:hover:text-creamWhite transition-colors">Seasonal specialties</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Contact Info</h4>
+          <ul class="space-y-3 text-sm text-mutedDark dark:text-gray-300">
+            <li class="flex items-start space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-map-pin mt-1 text-forest dark:text-sage"></i>
+              <span>848 Clover Meadow Road,<br>Gourmet Valley, GV 8201</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-phone text-forest dark:text-sage"></i>
+              <span>+1 (555) 489-3901</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-envelope text-forest dark:text-sage"></i>
+              <span>info@capra.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div
+        class="border-t border-forest/10 dark:border-sage/20 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-mutedDark dark:text-gray-400">
+        <p>&copy; 2026 Capra Artisanal Dairy Co. All Rights Reserved.</p>
+        <div class="flex space-x-6 rtl:space-x-reverse mt-4 md:mt-0">
+          <a href="#" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Terms & Conditions</a>
+          <a href="login.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Login Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top"
+    class="w-12 h-12 bg-honey text-forest hover:bg-forest hover:text-creamWhite rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+    aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+
+</html>

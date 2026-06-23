@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capra | About Our Heritage & Ethical Dairy Values</title>
+  <meta name="description"
+    content="Learn about Capra's multi-generational story, organic cheesemaking philosophies, animal welfare standards, and dedicated farming team.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            creamWhite: '#FFFDF7',
+            sage: '#7CBF7C',
+            meadow: '#4CAF50',
+            honey: '#F5B941',
+            cheese: '#FFD66B',
+            orange: '#F28C38',
+            forest: '#184D32',
+            brown: '#5A3E2B',
+            softBeige: '#F8F2E8',
+            headingDark: '#173A2E',
+            bodyDark: '#4A4A4A',
+            mutedDark: '#6E6E6E',
+          },
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS & FontAwesome & AOS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+
+<body
+  class="bg-creamWhite text-bodyDark dark:bg-[#111612] dark:text-[#E2E8F0] min-h-screen flex flex-col relative overflow-x-hidden">
+
+
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Sticky Header / Navbar -->
+  <header
+    class="sticky top-0 z-50 bg-white/80 dark:bg-[#111612]/80 backdrop-blur-md border-b border-sage/10 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group">
+          <div
+            class="w-12 h-12 bg-forest dark:bg-sage rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <i class="fa-solid fa-cheese text-creamWhite dark:text-forest text-2xl"></i>
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-playfair font-bold text-2xl text-headingDark dark:text-creamWhite leading-tight tracking-wide">Capra</span>
+            <span class="text-[10px] tracking-widest uppercase font-inter text-sage dark:text-cheese font-semibold">Goat
+              Dairy</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden lg:flex space-x-8 rtl:space-x-reverse font-inter font-medium text-sm lg:text-base animate-fade-in">
+          <a href="index.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Home
+            1</a>
+          <a href="home2.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Home
+            2</a>
+          <a href="about.html"
+            class="text-forest dark:text-sage border-b-2 border-forest dark:border-sage px-1 py-2 transition-colors">About</a>
+          <a href="collection.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Cheese
+            Collection</a>
+          <a href="wholesale.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Wholesale</a>
+          <a href="contact.html"
+            class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right CTA & Toggles -->
+        <div class="flex items-center space-x-2 md:space-x-4 rtl:space-x-reverse">
+          <!-- Theme Toggle (Desktop only) -->
+          <button
+            class="theme-toggle hidden lg:flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center rounded-lg border border-sage/20 hover:bg-softBeige dark:hover:bg-forest/20 text-forest dark:text-creamWhite transition-all"
+            aria-label="Toggle Theme">
+            <i class="fa-solid fa-sun dark:hidden"></i>
+            <i class="fa-solid fa-moon hidden dark:block"></i>
+          </button>
+
+          <!-- RTL Toggle (Desktop only) -->
+          <button
+            class="rtl-toggle hidden lg:flex w-9 h-9 sm:w-10 sm:h-10 items-center justify-center rounded-lg border border-sage/20 hover:bg-softBeige dark:hover:bg-forest/20 text-forest dark:text-creamWhite transition-all"
+            aria-label="Toggle Layout Direction">
+            <i class="fa-solid fa-right-left rtl-flip"></i>
+          </button>
+
+          <!-- Signup (Desktop only) -->
+          <a href="signup.html"
+            class="hidden lg:inline-block bg-forest hover:bg-forest/90 dark:bg-sage dark:hover:bg-sage/90 text-creamWhite dark:text-forest font-semibold px-4 py-2 sm:px-6 sm:py-2.5 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg text-xs sm:text-sm">
+            Sign Up
+          </a>
+
+          <!-- Hamburger Button -->
+          <button id="mobile-menu-btn"
+            class="lg:hidden w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg border border-sage/20 text-forest dark:text-creamWhite animate-pulse"
+            aria-expanded="false" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-out Menu -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden bg-white dark:bg-[#111612] border-t border-sage/10 px-4 py-6 space-y-4 shadow-xl transition-all duration-300 font-inter">
+      <nav class="flex flex-col space-y-3 font-medium">
+        <a href="index.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">Home 1</a>
+        <a href="home2.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">Home 2</a>
+        <a href="about.html" class="text-forest dark:text-sage font-bold py-2 border-b border-sage/5">About</a>
+        <a href="collection.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">Cheese
+          Collection</a>
+        <a href="wholesale.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">Wholesale</a>
+        <a href="contact.html" class="text-bodyDark dark:text-gray-300 py-2 border-b border-sage/5">Contact</a>
+      </nav>
+
+      <!-- Preferences and Toggles for Mobile/Tablet -->
+      <div class="pt-4 border-t border-sage/10 flex items-center justify-between">
+        <span class="text-sm font-semibold text-headingDark dark:text-creamWhite">Preferences</span>
+        <div class="flex space-x-2 rtl:space-x-reverse">
+          <!-- Theme Toggle (Mobile) -->
+          <button
+            class="theme-toggle w-9 h-9 flex items-center justify-center rounded-lg border border-sage/20 text-forest dark:text-creamWhite hover:bg-softBeige dark:hover:bg-forest/20 transition-all"
+            aria-label="Toggle Theme">
+            <i class="fa-solid fa-sun dark:hidden"></i>
+            <i class="fa-solid fa-moon hidden dark:block"></i>
+          </button>
+
+          <!-- RTL Toggle (Mobile) -->
+          <button
+            class="rtl-toggle w-9 h-9 flex items-center justify-center rounded-lg border border-sage/20 text-forest dark:text-creamWhite hover:bg-softBeige dark:hover:bg-forest/20 transition-all"
+            aria-label="Toggle Layout Direction">
+            <i class="fa-solid fa-right-left rtl-flip"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="pt-2 flex flex-col space-y-3">
+        <a href="login.html"
+          class="text-center text-forest dark:text-sage py-2.5 border border-forest dark:border-sage rounded-lg font-semibold hover:bg-softBeige transition-all">Log
+          In</a>
+        <a href="signup.html"
+          class="text-center bg-forest text-creamWhite dark:bg-sage dark:text-forest py-2.5 rounded-lg font-semibold shadow-md hover:bg-forest/90 transition-all">Sign
+          Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner / Header -->
+  <section class="relative py-24 bg-cover bg-center flex items-center"
+    style="background-image: linear-gradient(to bottom, rgba(24, 77, 50, 0.8), rgba(24, 77, 50, 0.8)), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1600&q=80');">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 text-creamWhite text-center">
+      <h1 class="font-playfair font-bold text-4xl md:text-6xl text-white mb-4" data-aos="fade-up">Our Heritage & Story
+      </h1>
+      <p class="font-inter text-base md:text-lg text-gray-200 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Learn how a humble family farm transformed into a state-of-the-art sustainable artisanal cheese producer.
+      </p>
+    </div>
+  </section>
+
+  <!-- Company Story & Family Farm Heritage -->
+  <section class="py-24 bg-white dark:bg-[#111612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <span
+            class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Generational
+            Integrity</span>
+          <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3 mb-6">The
+            Legacy of Clover Meadow</h2>
+          <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-6 leading-relaxed">
+            In 1994, the Vance family settled in the lush green foothills of Gourmet Valley with twelve Alpine goats and
+            a dream to restore organic micro-dairy practices. While industrial farming pushed for hyper-automation, we
+            chose the slow, hand-pressed methods of traditional cheese artisans.
+          </p>
+          <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
+            Today, Capra spans over 200 acres of biodynamic pasture. We still know our goats by name, hand-ladle our
+            curds daily, and age our wheels in custom limestone caves that mimic the natural microclimates of French
+            cheese cellars.
+          </p>
+        </div>
+
+        <div class="relative" data-aos="fade-left">
+          <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#1E2721]">
+            <img src="https://images.pexels.com/photos/33339085/pexels-photo-33339085.jpeg"
+              alt="Farmer in organic fields" class="w-full h-[450px] object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy & Animal Welfare -->
+  <section class="py-24 bg-softBeige dark:bg-[#131915]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1 relative" data-aos="fade-right">
+          <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#1E2721]">
+            <img src="https://images.pexels.com/photos/36861200/pexels-photo-36861200.jpeg" alt="Happy goats pasture"
+              class="w-full h-[450px] object-cover">
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2" data-aos="fade-left">
+          <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Ethical
+            Stewardship</span>
+          <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3 mb-6">Our
+            Production & Welfare Philosophy</h2>
+          <p class="text-mutedDark dark:text-gray-300 text-base md:text-lg mb-6 leading-relaxed">
+            We believe that milk quality is a direct reflection of an animal’s quality of life. Our goats pasture freely
+            on native grasses, chicory, and clover. They sleep in deep-straw bedding and enjoy clean, fresh mountain
+            well water.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3 rtl:space-x-reverse">
+              <i class="fa-solid fa-circle-check text-sage text-xl shrink-0"></i>
+              <span class="font-inter text-base dark:text-gray-300">100% Free-Range Pasture Access</span>
+            </div>
+            <div class="flex items-center space-x-3 rtl:space-x-reverse">
+              <i class="fa-solid fa-circle-check text-sage text-xl shrink-0"></i>
+              <span class="font-inter text-base dark:text-gray-300">Strictly Non-GMO Organic Feed Certification</span>
+            </div>
+            <div class="flex items-center space-x-3 rtl:space-x-reverse">
+              <i class="fa-solid fa-circle-check text-sage text-xl shrink-0"></i>
+              <span class="font-inter text-base dark:text-gray-300">No Antibiotics or Hormones ever used</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-24 bg-white dark:bg-[#111612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+        <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">The
+          Journey</span>
+        <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3">Timeline of
+          Growth</h2>
+      </div>
+
+      <div class="relative border-l-2 border-sage/20 max-w-3xl mx-auto pl-8 space-y-12">
+        <!-- Event 1 -->
+        <div class="relative" data-aos="fade-up">
+          <div
+            class="absolute -left-[41px] w-6 h-6 rounded-full bg-forest dark:bg-sage border-4 border-creamWhite dark:border-[#111612]">
+          </div>
+          <span class="text-xs font-bold text-honey uppercase tracking-wider block font-inter">1994</span>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mt-1 mb-2">The Founding Herd
+          </h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Julian Vance imports 12 elite Alpine goats to Gourmet Valley, beginning small-batch farmstead cheese
+            testing.
+          </p>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="relative" data-aos="fade-up">
+          <div
+            class="absolute -left-[41px] w-6 h-6 rounded-full bg-forest dark:bg-sage border-4 border-creamWhite dark:border-[#111612]">
+          </div>
+          <span class="text-xs font-bold text-honey uppercase tracking-wider block font-inter">2005</span>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mt-1 mb-2">First National
+            Gold Medal</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Our Herb Chèvre wins first prize at the American Cheese Society competition, launching our brand into
+            gourmet grocery circles.
+          </p>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="relative" data-aos="fade-up">
+          <div
+            class="absolute -left-[41px] w-6 h-6 rounded-full bg-forest dark:bg-sage border-4 border-creamWhite dark:border-[#111612]">
+          </div>
+          <span class="text-xs font-bold text-honey uppercase tracking-wider block font-inter">2016</span>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mt-1 mb-2">Clean Energy
+            Transition</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            We install 120kW solar systems and transition the entire milking barn to localized wind and green grid
+            systems.
+          </p>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="relative" data-aos="fade-up">
+          <div
+            class="absolute -left-[41px] w-6 h-6 rounded-full bg-forest dark:bg-sage border-4 border-creamWhite dark:border-[#111612]">
+          </div>
+          <span class="text-xs font-bold text-honey uppercase tracking-wider block font-inter">2026</span>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite mt-1 mb-2">Regenerative Dairy
+            Leader</h3>
+          <p class="text-sm text-mutedDark dark:text-gray-400">
+            Celebrating 30+ years of high-welfare dairy farming, servicing over 120 wholesale distribution partners
+            nationwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet Our Farmers / Team Members -->
+  <section class="py-24 bg-softBeige dark:bg-[#131915]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-sage dark:text-cheese font-semibold text-sm uppercase tracking-widest font-inter">Dedicated
+          Artisans</span>
+        <h2 class="font-playfair font-bold text-3xl md:text-5xl text-headingDark dark:text-creamWhite mt-3">Meet the
+          Team</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Team 1 -->
+        <div
+          class="bg-white dark:bg-[#1E2721] rounded-2xl overflow-hidden shadow-sm border border-sage/10 premium-card text-center pb-8"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="h-80 overflow-hidden mb-6">
+            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400"
+              alt="Julian Vance" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Julian Vance</h3>
+          <p class="text-xs text-sage dark:text-cheese uppercase tracking-wider font-semibold mt-1">Founder & Head
+            Cheesemaker</p>
+        </div>
+
+        <!-- Team 2 -->
+        <div
+          class="bg-white dark:bg-[#1E2721] rounded-2xl overflow-hidden shadow-sm border border-sage/10 premium-card text-center pb-8"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="h-80 overflow-hidden mb-6">
+            <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=400"
+              alt="Elena Vance" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Elena Vance</h3>
+          <p class="text-xs text-sage dark:text-cheese uppercase tracking-wider font-semibold mt-1">Co-Owner & Herd
+            Veterinarian</p>
+        </div>
+
+        <!-- Team 3 -->
+        <div
+          class="bg-white dark:bg-[#1E2721] rounded-2xl overflow-hidden shadow-sm border border-sage/10 premium-card text-center pb-8"
+          data-aos="fade-up" data-aos-delay="300">
+          <div class="h-80 overflow-hidden mb-6">
+            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
+              alt="Marcus Gray" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite">Marcus Gray</h3>
+          <p class="text-xs text-sage dark:text-cheese uppercase tracking-wider font-semibold mt-1">Cellar Master &
+            Logistics</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="py-16 bg-white dark:bg-[#111612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center font-playfair font-bold text-2xl md:text-3xl text-headingDark dark:text-creamWhite mb-12">
+        Official Certifications</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center items-center opacity-65 dark:opacity-85">
+        <div class="text-center font-bold text-lg font-playfair text-forest dark:text-sage"><i
+            class="fa-solid fa-leaf text-2xl mr-2 text-sage"></i>USDA Organic</div>
+        <div class="text-center font-bold text-lg font-playfair text-forest dark:text-sage"><i
+            class="fa-solid fa-sun text-2xl mr-2 text-honey"></i>Demeter Biodynamic</div>
+        <div class="text-center font-bold text-lg font-playfair text-forest dark:text-sage"><i
+            class="fa-solid fa-heart text-2xl mr-2 text-orange"></i>Animal Welfare Approved</div>
+        <div class="text-center font-bold text-lg font-playfair text-forest dark:text-sage"><i
+            class="fa-solid fa-shield text-2xl mr-2 text-cheese"></i>Non-GMO Verified</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    class="bg-white text-bodyDark dark:bg-[#0E130F] dark:text-[#E2E8F0] pt-16 pb-8 border-t border-sage/10 dark:border-sage/5 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
+        <!-- Overview -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 rtl:space-x-reverse mb-6">
+            <div class="w-10 h-10 bg-forest dark:bg-sage rounded-lg flex items-center justify-center shadow-md">
+              <i class="fa-solid fa-cheese text-creamWhite dark:text-forest text-xl"></i>
+            </div>
+            <span
+              class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite leading-tight">Capra</span>
+          </div>
+          <p class="text-sm text-mutedDark dark:text-gray-300 mb-6 leading-relaxed max-w-sm">
+            Handcrafting premium organic goat milk products using old-world heritage traditions and ecological farming
+            methods.
+          </p>
+          <div class="flex space-x-4 rtl:space-x-reverse">
+            <a href="#"
+              class="w-10 h-10 rounded-full border border-forest/20 dark:border-sage/30 flex items-center justify-center text-forest dark:text-creamWhite hover:bg-forest hover:text-white dark:hover:bg-sage dark:hover:text-forest transition-all"
+              aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full border border-forest/20 dark:border-sage/30 flex items-center justify-center text-forest dark:text-creamWhite hover:bg-forest hover:text-white dark:hover:bg-sage dark:hover:text-forest transition-all"
+              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"
+              class="w-10 h-10 rounded-full border border-forest/20 dark:border-sage/30 flex items-center justify-center text-forest dark:text-creamWhite hover:bg-forest hover:text-white dark:hover:bg-sage dark:hover:text-forest transition-all"
+              aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-mutedDark dark:text-gray-300">
+            <li><a href="index.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Home 1</a>
+            </li>
+            <li><a href="home2.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Home 2</a>
+            </li>
+            <li><a href="about.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">About Us</a>
+            </li>
+            <li><a href="collection.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Cheese
+                Collection</a></li>
+            <li><a href="wholesale.html"
+                class="hover:text-forest dark:hover:text-creamWhite transition-colors">Wholesale</a></li>
+            <li><a href="contact.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Contact
+                Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Cheese Categories -->
+        <div>
+          <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Categories</h4>
+          <ul class="space-y-2 text-sm text-mutedDark dark:text-gray-300">
+            <li><a href="collection.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Soft
+                Fresh Chevre</a></li>
+            <li><a href="collection.html"
+                class="hover:text-forest dark:hover:text-creamWhite transition-colors">Semi-Hard Tommes</a></li>
+            <li><a href="collection.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Aged
+                Reserve Cheddars</a></li>
+            <li><a href="collection.html"
+                class="hover:text-forest dark:hover:text-creamWhite transition-colors">Seasonal specialties</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Contact Info</h4>
+          <ul class="space-y-3 text-sm text-mutedDark dark:text-gray-300">
+            <li class="flex items-start space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-map-pin mt-1 text-forest dark:text-sage"></i>
+              <span>848 Clover Meadow Road,<br>Gourmet Valley, GV 8201</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-phone text-forest dark:text-sage"></i>
+              <span>+1 (555) 489-3901</span>
+            </li>
+            <li class="flex items-center space-x-2.5 rtl:space-x-reverse">
+              <i class="fa-solid fa-envelope text-forest dark:text-sage"></i>
+              <span>info@capra.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div
+        class="border-t border-forest/10 dark:border-sage/20 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-mutedDark dark:text-gray-400">
+        <p>&copy; 2026 Capra Artisanal Dairy Co. All Rights Reserved.</p>
+        <div class="flex space-x-6 rtl:space-x-reverse mt-4 md:mt-0">
+          <a href="#" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Terms & Conditions</a>
+          <a href="login.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Login Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top"
+    class="w-12 h-12 bg-honey text-forest hover:bg-forest hover:text-creamWhite rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+    aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+
+</html>
