@@ -91,26 +91,43 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Contact Name</label>
-            <input type="text" required placeholder="Julian Vance" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+            <input type="text" required placeholder="Enter your full name" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
           </div>
           <div>
             <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Business Entity</label>
-            <input type="text" required placeholder="Gourmet Fine Foods LLC" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+            <input type="text" required placeholder="Enter your business name" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
           </div>
         </div>
 
         <div>
           <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Email Address</label>
-          <input type="email" required placeholder="buyer@gourmetfinefoods.com" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+          <input type="email" required placeholder="Enter your email address" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
         </div>
 
         <div>
           <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Password</label>
-          <input type="password" id="signup-password" required placeholder="Create a strong password" class="w-full px-4 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+          <div class="relative">
+            <i class="fa-solid fa-lock absolute left-3 top-3 text-sage"></i>
+            <input type="password" id="signup-password" required placeholder="Create a strong password" class="w-full pl-10 pr-10 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+            <button type="button" class="toggle-password absolute right-3 top-3 text-sage hover:text-forest dark:hover:text-creamWhite focus:outline-none" data-target="signup-password" aria-label="Toggle Password Visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
           <!-- Password strength container -->
           <div class="mt-2">
             <div id="password-strength" class="h-2 rounded bg-gray-200 w-0 transition-all duration-300"></div>
             <span id="password-strength-text" class="text-xs mt-1 block"></span>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Confirm Password</label>
+          <div class="relative">
+            <i class="fa-solid fa-lock absolute left-3 top-3 text-sage"></i>
+            <input type="password" id="confirm-password" required placeholder="Confirm your password" class="w-full pl-10 pr-10 py-2.5 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+            <button type="button" class="toggle-password absolute right-3 top-3 text-sage hover:text-forest dark:hover:text-creamWhite focus:outline-none" data-target="confirm-password" aria-label="Toggle Password Visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
           </div>
         </div>
 
@@ -125,6 +142,21 @@
           Apply for Registration
         </button>
       </form>
+
+      <!-- Social Signups -->
+      <div class="mt-6 border-t border-sage/20 pt-6">
+        <span class="block text-center text-xs text-mutedDark dark:text-gray-400 uppercase tracking-widest mb-4">Or Sign Up With</span>
+        <div class="grid grid-cols-2 gap-3">
+          <button class="flex items-center justify-center space-x-2 rtl:space-x-reverse py-2.5 border border-sage/30 rounded-lg bg-white/80 hover:bg-white text-xs font-semibold dark:bg-[#111612]/80 dark:hover:bg-[#111612] text-bodyDark dark:text-creamWhite transition-all">
+            <i class="fa-brands fa-google text-red-500"></i>
+            <span>Google</span>
+          </button>
+          <button class="flex items-center justify-center space-x-2 rtl:space-x-reverse py-2.5 border border-sage/30 rounded-lg bg-white/80 hover:bg-white text-xs font-semibold dark:bg-[#111612]/80 dark:hover:bg-[#111612] text-bodyDark dark:text-creamWhite transition-all">
+            <i class="fa-brands fa-apple text-black dark:text-white"></i>
+            <span>Apple</span>
+          </button>
+        </div>
+      </div>
 
       <div class="mt-6 text-center text-xs font-inter text-mutedDark dark:text-gray-300">
         Already registered? <a href="login.html" class="text-forest dark:text-sage font-bold hover:text-honey transition-colors">Log in here</a>

@@ -170,3 +170,11 @@ a.border-white\/60:active {
   transform: translateY(-1px) scale(1.005);
 }
 
+/* Accordion details/summary overrides */
+summary::-webkit-details-marker {
+  display: none;
+}
+summary {
+  list-style: none;
+}
+

@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Password Strength Indicator (For Signup page)
   initPasswordStrength();
+
+  // Password Visibility Toggle
+  initPasswordToggle();
 });
 
 /* Theme Functions */
@@ -169,6 +172,21 @@ function initForms() {
       });
 
       if (!isValid) return;
+
+      // Password confirmation check
+      const password = form.querySelector('#signup-password');
+      const confirmPassword = form.querySelector('#confirm-password');
+      if (password && confirmPassword) {
+        if (password.value !== confirmPassword.value) {
+          password.classList.add('border-red-500');
+          confirmPassword.classList.add('border-red-500');
+          showToast('Passwords do not match. Please try again.');
+          return;
+        } else {
+          password.classList.remove('border-red-500');
+          confirmPassword.classList.remove('border-red-500');
+        }
+      }
 
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
@@ -316,5 +334,32 @@ function initPasswordStrength() {
       strengthText.innerText = 'Strong';
       strengthText.className = 'text-xs text-green-500 mt-1 block';
     }
+  });
+}
+
+/* Password Visibility Toggle */
+function initPasswordToggle() {
+  const toggleBtns = document.querySelectorAll('.toggle-password');
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const passwordInput = document.getElementById(targetId);
+      if (!passwordInput) return;
+
+      const icon = btn.querySelector('i');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        if (icon) {
+          icon.classList.remove('fa-eye');
+          icon.classList.add('fa-eye-slash');
+        }
+      } else {
+        passwordInput.type = 'password';
+        if (icon) {
+          icon.classList.remove('fa-eye-slash');
+          icon.classList.add('fa-eye');
+        }
+      }
+    });
   });
 }

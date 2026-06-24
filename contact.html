@@ -65,7 +65,7 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex space-x-8 rtl:space-x-reverse font-inter font-medium text-sm lg:text-base">
+        <nav class="hidden lg:flex lg:space-x-4 xl:space-x-8 rtl:space-x-reverse font-inter font-medium text-sm xl:text-base whitespace-nowrap">
           <a href="index.html" class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Home 1</a>
           <a href="home2.html" class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">Home 2</a>
           <a href="about.html" class="text-bodyDark dark:text-gray-300 hover:text-forest dark:hover:text-sage px-1 py-2 transition-colors">About</a>
@@ -279,15 +279,22 @@
   <!-- Footer -->
   <footer class="bg-white text-bodyDark dark:bg-[#0E130F] dark:text-[#E2E8F0] pt-16 pb-8 border-t border-sage/10 dark:border-sage/5 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
         <!-- Overview -->
-        <div class="md:col-span-2">
-          <div class="flex items-center space-x-3 rtl:space-x-reverse mb-6">
-            <div class="w-10 h-10 bg-forest dark:bg-sage rounded-lg flex items-center justify-center shadow-md">
-              <i class="fa-solid fa-cheese text-creamWhite dark:text-forest text-xl"></i>
+        <div class="col-span-1 md:col-span-2 lg:col-span-2">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse group mb-6">
+            <div
+              class="w-12 h-12 bg-forest dark:bg-sage rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+              <i class="fa-solid fa-cheese text-creamWhite dark:text-forest text-2xl"></i>
             </div>
-            <span class="font-playfair font-bold text-xl text-headingDark dark:text-creamWhite leading-tight">Capra</span>
-          </div>
+            <div class="flex flex-col">
+              <span
+                class="font-playfair font-bold text-2xl text-headingDark dark:text-creamWhite leading-tight tracking-wide group-hover:text-forest dark:group-hover:text-sage transition-colors">Capra</span>
+              <span class="text-[10px] tracking-widest uppercase font-inter text-sage dark:text-cheese font-semibold">Goat
+                Dairy</span>
+            </div>
+          </a>
           <p class="text-sm text-mutedDark dark:text-gray-300 mb-6 leading-relaxed max-w-sm">
             Handcrafting premium organic goat milk products using old-world heritage traditions and ecological farming methods.
           </p>
@@ -299,7 +306,7 @@
         </div>
 
         <!-- Quick Links -->
-        <div>
+        <div class="col-span-1">
           <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Quick Links</h4>
           <ul class="space-y-2 text-sm text-mutedDark dark:text-gray-300 animate-fade-in">
             <li><a href="index.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Home 1</a></li>
@@ -312,7 +319,7 @@
         </div>
 
         <!-- Cheese Categories -->
-        <div>
+        <div class="col-span-1">
           <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Categories</h4>
           <ul class="space-y-2 text-sm text-mutedDark dark:text-gray-300">
             <li><a href="collection.html" class="hover:text-forest dark:hover:text-creamWhite transition-colors">Soft Fresh Chevre</a></li>
@@ -323,7 +330,7 @@
         </div>
 
         <!-- Contact Information -->
-        <div>
+        <div class="col-span-1 md:col-span-2 lg:col-span-1">
           <h4 class="font-playfair font-semibold text-lg text-forest dark:text-cheese mb-4">Contact Info</h4>
           <ul class="space-y-3 text-sm text-mutedDark dark:text-gray-300">
             <li class="flex items-start space-x-2.5 rtl:space-x-reverse">

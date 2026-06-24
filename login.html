@@ -92,7 +92,7 @@
           <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Email Address</label>
           <div class="relative">
             <i class="fa-regular fa-envelope absolute left-3 top-3.5 text-sage"></i>
-            <input type="email" required placeholder="name@business.com" class="w-full pl-10 pr-4 py-3 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+            <input type="email" required placeholder="Enter your email address" class="w-full pl-10 pr-4 py-3 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
           </div>
         </div>
 
@@ -100,7 +100,10 @@
           <label class="block text-xs font-bold text-headingDark dark:text-creamWhite uppercase tracking-wider mb-2 font-inter">Password</label>
           <div class="relative">
             <i class="fa-solid fa-lock absolute left-3 top-3.5 text-sage"></i>
-            <input type="password" required placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" class="w-full pl-10 pr-4 py-3 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+            <input type="password" id="login-password" required placeholder="Enter your password" class="w-full pl-10 pr-10 py-3 rounded-lg border border-sage/30 bg-white/80 dark:bg-[#111612]/80 text-bodyDark dark:text-creamWhite focus:outline-none focus:ring-2 focus:ring-sage font-inter text-sm">
+            <button type="button" class="toggle-password absolute right-3 top-3.5 text-sage hover:text-forest dark:hover:text-creamWhite focus:outline-none" data-target="login-password" aria-label="Toggle Password Visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
           </div>
         </div>
 
