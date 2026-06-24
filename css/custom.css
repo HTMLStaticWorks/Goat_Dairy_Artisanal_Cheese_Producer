@@ -19,22 +19,7 @@ h1, h2, h3, h4, h5, h6, .font-playfair {
 
 
 
-/* Scroll Progress Indicator */
-#scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 4px;
-  background: linear-gradient(to right, #7CBF7C, #F5B941);
-  width: 0%;
-  z-index: 10000;
-  transition: width 0.1s ease-out;
-}
 
-[dir="rtl"] #scroll-progress {
-  left: auto;
-  right: 0;
-}
 
 /* Back to Top Button */
 #back-to-top {

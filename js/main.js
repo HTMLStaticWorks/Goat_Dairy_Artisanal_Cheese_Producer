@@ -3,9 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initRTL();
 
-  // Scroll Progress Indicator
-  window.addEventListener('scroll', updateScrollProgress);
-
   // Back to Top Button
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {
@@ -100,17 +97,6 @@ function toggleRTL() {
   } else {
     document.documentElement.setAttribute('dir', 'rtl');
     localStorage.setItem('rtl', 'true');
-  }
-}
-
-/* Scroll Progress */
-function updateScrollProgress() {
-  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrolled = (winScroll / height) * 100;
-  const progressBar = document.getElementById('scroll-progress');
-  if (progressBar) {
-    progressBar.style.width = scrolled + '%';
   }
 }
 
