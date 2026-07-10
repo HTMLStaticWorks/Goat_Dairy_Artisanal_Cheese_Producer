@@ -47,6 +47,12 @@ h1, h2, h3, h4, h5, h6, .font-playfair {
   left: 30px;
 }
 
+@media (max-width: 1023px) {
+  #back-to-top {
+    display: none !important;
+  }
+}
+
 /* Floating Shapes */
 .floating-shape {
   position: absolute;
@@ -167,4 +173,49 @@ summary::-webkit-details-marker {
 summary {
   list-style: none;
 }
+
+/* Reduce heading font sizes globally for better readability and balance */
+h1 {
+  font-size: 2.25rem !important;
+}
+h2 {
+  font-size: 1.75rem !important;
+}
+h3 {
+  font-size: 1.5rem !important;
+}
+
+/* Override Tailwind size classes used on headings for finer tuning */
+.text-3xl { font-size: 1.625rem !important; }
+.text-4xl { font-size: 2rem !important; }
+.text-5xl { font-size: 2.5rem !important; }
+.text-6xl { font-size: 3rem !important; }
+.text-7xl { font-size: 3.75rem !important; }
+.text-8xl { font-size: 4.75rem !important; }
+.text-9xl { font-size: 6rem !important; }
+
+@media (min-width: 768px) {
+  h1 { font-size: 3.5rem !important; }
+  h2 { font-size: 2.5rem !important; }
+  h3 { font-size: 1.75rem !important; }
+
+  .md\:text-3xl { font-size: 1.75rem !important; }
+  .md\:text-4xl { font-size: 2.25rem !important; }
+  .md\:text-5xl { font-size: 2.75rem !important; }
+  .md\:text-6xl { font-size: 3.5rem !important; }
+  .md\:text-7xl { font-size: 4.25rem !important; }
+  .md\:text-8xl { font-size: 5.25rem !important; }
+  .md\:text-9xl { font-size: 6.5rem !important; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-3xl { font-size: 1.75rem !important; }
+  .lg\:text-4xl { font-size: 2.25rem !important; }
+  .lg\:text-5xl { font-size: 2.75rem !important; }
+  .lg\:text-6xl { font-size: 3.5rem !important; }
+  .lg\:text-7xl { font-size: 4.25rem !important; }
+  .lg\:text-8xl { font-size: 5.25rem !important; }
+  .lg\:text-9xl { font-size: 6.5rem !important; }
+}
+
 
